@@ -404,7 +404,7 @@
     .map-card .map-head { padding: 24px 28px 18px; }
     .map-card h3 { margin: 0 0 6px; font-size: 22px; }
     .map-card .addr { color: var(--muted); font-size: 15px; }
-    .map-card iframe { width: 100%; min-height: 320px; border: 0; display: block; }
+    .map-card iframe { width: 100%; min-height: 440px; border: 0; display: block; }
     .map-actions { display: flex; gap: 10px; padding: 18px 28px 24px; flex-wrap: wrap; }
 
     .hours-card h3 { margin: 0 0 4px; font-size: 22px; }
@@ -491,8 +491,8 @@
   <div class="topbar">
     <div class="container">
       <div class="tb-item hide-sm">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-        1919 Monterey Rd, Ste 10, San Jose, CA 95112
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Open 7 days a week
       </div>
       <div class="tb-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
@@ -518,6 +518,10 @@
           <a href="#contact">Contact</a>
         </div>
         <div class="nav-cta">
+          <button id="langToggle" class="btn secondary" type="button" aria-label="Cambiar a Español" style="padding:10px 15px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span id="langLabel">Español</span>
+          </button>
           <a class="btn primary" href="tel:14089752485">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
             Call store
@@ -565,7 +569,7 @@
 
         <div class="hero-visual">
           <div class="hero-photo">
-            <img src="images/hero.jpg" alt="Aisle of wholesale goods inside Central Cash & Carry in San Jose" />
+            <img src="images/storefront2.jpg" alt="Front view of the Central Cash & Carry building in San Jose" />
           </div>
           <div class="float-card tl">
             <div class="ic">
@@ -762,7 +766,7 @@
         <div class="visit-grid">
           <div class="card map-card">
             <div class="storefront">
-              <img src="images/storefront.jpg" alt="Storefront of Central Cash & Carry on Monterey Road, San Jose" />
+              <img src="images/storefront.jpg" alt="Storefront entrance of Central Cash & Carry on Monterey Road, San Jose" />
               <span class="storefront-tag">Look for the blue building on Monterey Rd</span>
             </div>
             <div class="map-head">
@@ -773,7 +777,7 @@
               loading="lazy"
               allowfullscreen
               referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=1919+Monterey+Rd+STE+10,+San+Jose,+CA+95112&output=embed">
+              src="https://www.google.com/maps?q=1919+Monterey+Rd+STE+10,+San+Jose,+CA+95112&z=13&output=embed">
             </iframe>
             <div class="map-actions">
               <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=1919+Monterey+Rd+STE+10,+San+Jose,+CA+95112">
@@ -900,7 +904,7 @@
       </div>
       <div class="foot-bottom">
         <div>&copy; <span id="yr">2026</span> Central Cash &amp; Carry. All rights reserved.</div>
-        <div>1919 Monterey Rd, Ste 10, San Jose, CA 95112</div>
+        <div>Wholesale supply &middot; San Jose</div>
       </div>
     </div>
   </footer>
@@ -978,6 +982,173 @@
         else if (e.key === 'ArrowRight') show(cur + 1);
       });
     })();
+  </script>
+
+  <!-- ============================================================
+       Spanish / English toggle
+       Translations live in the T object below (English : Spanish).
+       To edit wording, change the Spanish value on the right.
+       ============================================================ -->
+  <script>
+  (function () {
+    var T = {
+      "Call": "Llamar",
+      "About": "Nosotros",
+      "Categories": "Categorías",
+      "Catalog": "Catálogo",
+      "Gallery": "Galería",
+      "Visit": "Visítanos",
+      "Contact": "Contacto",
+      "Call store": "Llamar",
+      "Wholesale supply · San Jose": "Mayoreo · San Jose",
+      "Bulk basics, kitchen gear & packaging for": "Provisiones al por mayor, equipo de cocina y empaque para",
+      "busy Bay Area businesses.": "negocios ocupados del Área de la Bahía.",
+      "Central Cash & Carry is a San Jose wholesale supply store stocking restaurant supplies, retail packaging, coffee & catering goods, janitorial products, and party essentials — all under one roof, at prices that work for your business.": "Central Cash & Carry es una tienda de mayoreo en San Jose con suministros para restaurantes, empaque comercial, productos de café y catering, artículos de limpieza y esenciales para fiestas — todo bajo un mismo techo y a precios que funcionan para tu negocio.",
+      "Call the store": "Llama a la tienda",
+      "Get directions": "Cómo llegar",
+      "Browse categories": "Ver categorías",
+      "20+ years": "20+ años",
+      "serving the Bay Area": "sirviendo al Área de la Bahía",
+      "Open 7 days": "Abierto 7 días",
+      "a week": "a la semana",
+      "Wholesale": "Precios",
+      "pricing": "de mayoreo",
+      "Open today": "Abierto hoy",
+      "Everything in one stop": "Todo en un solo lugar",
+      "100s of supplies": "Cientos de productos",
+      "Years in business": "Años en el negocio",
+      "Days open weekly": "Días abiertos por semana",
+      "Stop for it all": "Lugar para todo",
+      "Of products in stock": "Productos en existencia",
+      "Why businesses choose us": "Por qué los negocios nos eligen",
+      "The reliable local supplier the Bay Area has trusted for 20+ years": "El proveedor local confiable en el que el Área de la Bahía ha confiado por más de 20 años",
+      "One stop for front-of-house and back-of-house essentials — without juggling multiple specialty suppliers.": "Un solo lugar para lo esencial del área de servicio y de cocina — sin tener que lidiar con varios proveedores especializados.",
+      "Simple, useful, and built for people who need supplies fast": "Simple, útil y hecho para quienes necesitan suministros rápido",
+      "Serving the San Francisco Bay Area for more than 20 years, with inventory that spans restaurant equipment and supplies, packaging materials, paper goods, coffee supplies, catering products, and janitorial basics.": "Sirviendo al Área de la Bahía de San Francisco por más de 20 años, con inventario que abarca equipo y suministros para restaurantes, materiales de empaque, productos de papel, insumos de café, productos de catering y artículos básicos de limpieza.",
+      "Central Cash & Carry is a go-to stop for restaurant owners, caterers, party planners, and small businesses — recommended for its wide selection of wholesale goods, competitive pricing, and convenient location off Monterey Road.": "Central Cash & Carry es el lugar de referencia para dueños de restaurantes, personal de catering, organizadores de fiestas y pequeños negocios — recomendado por su amplia selección de productos al por mayor, precios competitivos y su conveniente ubicación sobre Monterey Road.",
+      "Restaurant supplies": "Suministros para restaurantes",
+      "Retail packaging": "Empaque comercial",
+      "Coffee & catering": "Café y catering",
+      "Party supplies": "Artículos para fiestas",
+      "Janitorial basics": "Limpieza básica",
+      "A good fit for": "Ideal para",
+      "Restaurants and takeout kitchens stocking up on cups, lids, cutlery, wraps, and containers": "Restaurantes y cocinas de comida para llevar que se surten de vasos, tapas, cubiertos, envolturas y contenedores",
+      "Caterers and party planners grabbing servingware, table covers, trays, and cleanup supplies": "Personal de catering y organizadores de fiestas que buscan vajilla desechable, manteles, charolas y artículos de limpieza",
+      "Small shops and local businesses after bags, paper goods, packaging, and bulk basics": "Tiendas pequeñas y negocios locales que necesitan bolsas, productos de papel, empaque y básicos al por mayor",
+      "Teams that want one place for both front-of-house and back-of-house essentials": "Equipos que quieren un solo lugar para lo esencial del área de servicio y de cocina",
+      "What we stock": "Lo que tenemos",
+      "Main categories": "Categorías principales",
+      "From the kitchen line to the cleaning closet — here’s a snapshot of what you’ll find on the shelves.": "De la línea de cocina al clóset de limpieza — un vistazo de lo que encontrarás en los estantes.",
+      "Foodservice & restaurant": "Restaurante y servicio de comida",
+      "Everything the kitchen and counter run on, from disposables to small equipment.": "Todo lo que mueve la cocina y el mostrador, desde desechables hasta equipo pequeño.",
+      "Cups & lids": "Vasos y tapas",
+      "Containers": "Contenedores",
+      "Pizza boxes": "Cajas de pizza",
+      "Food wrap": "Envoltura",
+      "Glassware": "Cristalería",
+      "Brewers & warmers": "Cafeteras y calentadores",
+      "Packaging & paper goods": "Empaque y productos de papel",
+      "Bulk packaging and paper products for day-to-day operations.": "Empaque y productos de papel al por mayor para el día a día.",
+      "Bags": "Bolsas",
+      "Can liners": "Bolsas de basura",
+      "Napkins": "Servilletas",
+      "Tapes": "Cintas",
+      "Plastic cutlery": "Cubiertos de plástico",
+      "Table covers": "Manteles",
+      "Cleaning, party & extras": "Limpieza, fiestas y más",
+      "Janitorial supplies plus the extras that round out any event or shop.": "Artículos de limpieza más los extras que complementan cualquier evento o negocio.",
+      "Janitorial": "Limpieza",
+      "Dispensers": "Dispensadores",
+      "Household items": "Artículos del hogar",
+      "Barbecue": "Barbacoa",
+      "Bakery basics": "Repostería básica",
+      "View full catalog": "Ver catálogo completo",
+      "Inside the store": "Dentro de la tienda",
+      "A real cash-and-carry experience": "Una verdadera experiencia de autoservicio",
+      "Take a walk through the aisles before you visit — tap any photo to see it full size and browse the selection.": "Recorre los pasillos antes de visitarnos — toca cualquier foto para verla en grande y explorar la selección.",
+      "Plan your visit": "Planea tu visita",
+      "Stop by the store": "Visita la tienda",
+      "Conveniently located on Monterey Road in San Jose, with easy parking and quick in-and-out.": "Ubicada convenientemente sobre Monterey Road en San Jose, con estacionamiento fácil y entrada y salida rápidas.",
+      "Look for the blue building on Monterey Rd": "Busca el edificio azul en Monterey Rd",
+      "Hours of operation": "Horario",
+      "Open 7 days a week": "Abierto 7 días a la semana",
+      "Monday": "Lunes",
+      "Tuesday": "Martes",
+      "Wednesday": "Miércoles",
+      "Thursday": "Jueves",
+      "Friday": "Viernes",
+      "Saturday": "Sábado",
+      "Sunday": "Domingo",
+      "Closed": "Cerrado",
+      "Payments accepted": "Formas de pago",
+      "Cash": "Efectivo",
+      "Check": "Cheque",
+      "Get in touch": "Comunícate",
+      "Contact Central Cash & Carry": "Contacta a Central Cash & Carry",
+      "Questions about stock or pricing? Give us a call or come see us in person.": "¿Preguntas sobre existencias o precios? Llámanos o ven a vernos en persona.",
+      "Call us": "Llámanos",
+      "Mon–Fri 7 AM–7 PM · Sat 8 AM–6 PM · Sun 9 AM–5 PM": "Lun–Vie 7 AM–7 PM · Sáb 8 AM–6 PM · Dom 9 AM–5 PM",
+      "Open in Maps →": "Abrir en Maps →",
+      "Follow us": "Síguenos",
+      "Stay up to date with new stock and deals.": "Mantente al día con nuevos productos y ofertas.",
+      "Need supplies this week?": "¿Necesitas suministros esta semana?",
+      "Skip the run-around between specialty suppliers. Call ahead or stop by — we’ll help you load up on everything in one trip.": "Olvídate de ir de proveedor en proveedor. Llama antes o visítanos — te ayudamos a surtir todo en un solo viaje.",
+      "Call (408) 975-2485": "Llama al (408) 975-2485",
+      "San Jose’s one-stop wholesale supply store for restaurants, caterers, party planners, and local businesses — serving the Bay Area for over 20 years.": "La tienda de mayoreo de San Jose para restaurantes, catering, organizadores de fiestas y negocios locales — sirviendo al Área de la Bahía por más de 20 años.",
+      "Explore": "Explorar",
+      "Visit & hours": "Visita y horario",
+      "Visit us": "Visítanos",
+      "Mon–Sun": "Lun–Dom",
+      "Central Cash & Carry. All rights reserved.": "Central Cash & Carry. Todos los derechos reservados."
+    };
+
+    var titleEN = document.title;
+    var titleES = "Central Cash & Carry | Suministros para restaurantes y empaque en San Jose";
+    var norm = function (s) { return s.replace(/\s+/g, ' ').trim(); };
+    var btn = document.getElementById('langToggle');
+    var label = document.getElementById('langLabel');
+    if (!btn || !label) return;
+
+    var nodes = [];
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        if (!n.nodeValue || !n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        var p = n.parentNode ? n.parentNode.nodeName : '';
+        if (p === 'SCRIPT' || p === 'STYLE' || p === 'NOSCRIPT') return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while (node = w.nextNode()) { node.__en = node.nodeValue; nodes.push(node); }
+
+    function apply(lang) {
+      nodes.forEach(function (n) {
+        if (n === label.firstChild) return; // manage the toggle label separately
+        var en = n.__en;
+        if (lang === 'es') {
+          var es = T[norm(en)];
+          if (es !== undefined) {
+            var lead = (en.match(/^\s*/) || [''])[0];
+            var trail = (en.match(/\s*$/) || [''])[0];
+            n.nodeValue = lead + es + trail;
+          }
+        } else {
+          n.nodeValue = en;
+        }
+      });
+      document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+      document.title = lang === 'es' ? titleES : titleEN;
+      label.textContent = lang === 'es' ? 'English' : 'Español';
+      btn.setAttribute('aria-label', lang === 'es' ? 'Switch to English' : 'Cambiar a Español');
+      try { localStorage.setItem('ccc-lang', lang); } catch (e) {}
+    }
+
+    var cur = 'en';
+    try { if (localStorage.getItem('ccc-lang') === 'es') cur = 'es'; } catch (e) {}
+    if (cur === 'es') apply('es'); else label.textContent = 'Español';
+
+    btn.addEventListener('click', function () { cur = (cur === 'es') ? 'en' : 'es'; apply(cur); });
+  })();
   </script>
 </body>
 </html>
